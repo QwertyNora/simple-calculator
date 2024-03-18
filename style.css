@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #ecf0f3;
+    font-family: sans-serif;
+    outline: none;
+}
+
+@font-face {
+    font-family: 'Calc';
+    src: url(Calculator.ttf);
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    background-color: #747577;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: inset 5px 5px 8px #a9a9a9,
+                      5px 5px 5px rgba(0, 0, 0, .16);
+    display: grid;
+    grid-template-columns: repeat(4, 68px);
+}
+
+input {
+    font-family: 'Calc';
+    grid-column: span 4;
+    height: 70px;
+    width: 260px;
+    background-color: #ecf0f3;
+    box-shadow:  inset -5px -5px 12px #fff,
+                 inset 5px 5px 12px rgba(0, 0, 0, .16);
+    border: 1px solid rgb(70, 70, 70);
+    border-radius: 5px;
+    color: rgb(70, 70, 70);
+    font-size: 50px;
+    text-align: end;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+/* button {
+    height: 48px;
+    width: 48px;
+    background-color: #ecf0f3;
+    box-shadow: -2px -2px 12px #fff,
+                5px 5px 12px rgba(0, 0, 0, 0.307);
+    border: none;
+    border-radius: 50%;
+    margin: 8px;
+    font-size: 16px;
+}
+
+button:hover{
+    background-color: #f0f5f8;
+}
+
+button:active{
+    background-color: #e1e6ea;
+    box-shadow:  inset -5px -5px 5px #fff,
+                 inset 5px 5px 5px rgba(0, 0, 0, .16);
+} */
+
+button {
+    --bg: #878787;
+    --text-color: #fff;
+    position: relative;
+    width: 50px;
+    border: none;
+    margin: 7px;
+    background: var(--bg);
+    color: var(--text-color);
+    padding: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.2s;
+    border-radius: 5px;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    box-shadow: #616161 0px 7px 2px, #000 0px 8px 5px;
+  }
+  
+  button:hover {
+    opacity: 1;
+  }
+  
+  button:active {
+    top: 4px;
+    box-shadow: #4b4b4b 0px 3px 2px,#000 0px 3px 5px;
+  }
+
+.operator:hover {
+    opacity: 1;
+}  
+
+.operator {
+    background-color: #646464;
+    opacity: 0.8;
+    box-shadow: #4a4a4a 0px 7px 2px, #000 0px 8px 5px;
+}
+
+.operator:active {
+    box-shadow: #414141 0px 3px 2px,#000 0px 3px 5px;
+}
+
+.equal:hover, .clear:hover {
+    opacity: 1;
+}
+
+.equal, .clear {
+    background-color: #e74c3c;
+    opacity: 0.8;
+    box-shadow: #c0392b 0px 7px 2px, #000 0px 8px 5px;
+}
